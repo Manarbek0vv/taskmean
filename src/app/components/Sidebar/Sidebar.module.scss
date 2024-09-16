@@ -1,0 +1,79 @@
+.sidebar {
+    max-width: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 20px 5px;
+    align-items: center;
+    background-color: rgb(249 249 249);
+    // border: 1px solid black;
+
+    .logo {
+        width: 50px;
+    }
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+
+        .ul {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .link {
+                position: relative;
+
+                .tooltip {
+                    visibility: hidden;
+                    padding: 5px 10px;
+                    position: absolute;
+                    opacity: 0;
+                    z-index: 5;
+                    left: calc(100% + 10px);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: #37b2ac;
+                    color: white;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    transition: opacity 400ms;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        right: 100%;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #37b2ac;
+                        top: 50%;
+                        transform: translateY(-50%) rotateZ(-90deg);
+                        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                        z-index: 4;
+                    }
+                }
+
+                &:hover .tooltip {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .li {
+                    .icon {
+                        width: 25px;
+                        height: 25px;
+
+                        * {
+                            color: gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
