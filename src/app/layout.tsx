@@ -1,28 +1,22 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
 import "./globals.css";
-import { CSSProperties } from "react";
+import classes from './layout.module.scss';
 import Sidebar from "./components/Sidebar/Sidebar";
+import Header from "./components/Header/Header";
+
 
 const inter = Inter({
   subsets: ['cyrillic'],
-  weight: ['500', '600', '700']
+  weight: ['400', '500', '600', '700']
 })
+
 
 export const metadata: Metadata = {
   title: "TaskMean",
   description: "The comfortable task manager.",
 };
 
-const wrapperStyle: CSSProperties = {
-  width: '100vw',
-  height: '100vh',
-  backgroundColor: '#f9f9f9',
-  position: 'relative',
-  display: 'flex',
-  gap: '0',
-  overflow: 'hidden'
-}
 
 export default function RootLayout({
   children,
@@ -32,9 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div style={wrapperStyle}>
+        <div className={classes.wrapper}>
           <Sidebar />
-          {children}
+          <div className={classes.inner}>
+            <Header />
+            {children}
+          </div>
         </div>
       </body>
     </html>

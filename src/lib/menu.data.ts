@@ -1,4 +1,4 @@
-import { ClipboardCheck, Github, LayoutGrid, LucideIcon, Timer, TimerOff } from "lucide-react";
+import { ClipboardCheck, Github, LayoutGrid, LucideIcon, Moon, Timer, TimerOff, User } from "lucide-react";
 
 export interface IMenu {
     icon: LucideIcon;
@@ -31,3 +31,24 @@ export const MENU: IMenu[] = [
 
 // ------------------------------------
 
+type IHeaderLink = Omit<IMenu, 'title'> & { id: number }
+
+const GITHUB = "https://github.com/Manarbek0vv/taskmean"
+
+export const HeaderLinks: IHeaderLink[] = [
+    {
+        id: 1,
+        icon: Github,
+        link: GITHUB,
+    },
+    {
+        id: 2,
+        icon: Moon,
+        link: GITHUB,
+    },
+    {
+        id: 3,
+        icon: User,
+        link: GITHUB,
+    }
+]

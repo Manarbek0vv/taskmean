@@ -1,0 +1,16 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f9f9f9;
+    position: relative;
+    display: flex;
+    gap: 0;
+    overflow: hidden;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1 1;
+}
