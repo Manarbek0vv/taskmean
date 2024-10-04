@@ -1,0 +1,11 @@
+.main {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 30px;
+    background-image: url('../../../public/background.png');
+    background-size: cover;
+    border-radius: 30px;
+    align-items: center;
+}

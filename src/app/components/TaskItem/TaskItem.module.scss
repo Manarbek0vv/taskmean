@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 1.6px solid rgb(249, 249, 249);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 100%;
+    flex: 1 0;
+
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 2rem;
+        color: black;
+        max-width: 100%;
+        word-wrap: break-word;
+        max-height: 45%;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+
+    .description {
+        font-size: 16px;
+        max-width: 100%;
+        word-wrap: break-word;
+        max-height: 45%;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+}
+
+.interactive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .created-at {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.25rem;
+        color: rgb(156 163 175);
+        white-space: nowrap;
+    }
+
+    .priority {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.25rem;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .star {
+            font-size: 24px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            * {
+                color: rgb(156, 163, 175);
+            }
+        }
+
+        .completed {
+            * {
+                color: rgb(255, 208, 0);
+            }
+        }
+
+        .delete {
+            font-size: 26px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            * {
+                color: rgb(246, 83, 20);
+            }
+        }
+    }
+}

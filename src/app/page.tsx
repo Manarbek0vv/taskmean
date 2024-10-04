@@ -1,6 +1,13 @@
-import classes from "./page.module.scss";
+import { fetchAllTasks } from "@/lib/data";
+import Main from "./ui/Main/Main";
 
-export default function HomePage() {
+export default function AllTasksPage({
+  searchParams: { priority }
+}: {
+    searchParams: {
+      priority?: string
+    }
+}) {
 
-  return <h1>Home Page</h1>
+  return <Main callback={fetchAllTasks} priority={priority} />
 }

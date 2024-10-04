@@ -1,0 +1,12 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 256px;
+    gap: 24px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-top: 20px;
+    flex: 1 1;
+    height: 100%;
+}

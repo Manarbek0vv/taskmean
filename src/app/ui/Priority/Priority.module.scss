@@ -1,0 +1,47 @@
+.container {
+    padding: .5rem;
+    background-color: rgb(249, 249, 249);
+    border: 1.6px solid white;
+    padding: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.button {
+    background-color: transparent;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    border: none;
+    color: rgb(107 114 128);
+    width: 62px;
+    height: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.active {
+    color: rgb(58 175 174);
+}
+
+.hover {
+    position: absolute;
+    z-index: 100;
+    width: 62px;
+    left: 8px;
+    height: calc(100% - 10px);
+    background-color: rgba(128, 128, 128, 0.15);
+    transition: all 300ms;
+    transform: translate(0px);
+    border-radius: 7px;
+}

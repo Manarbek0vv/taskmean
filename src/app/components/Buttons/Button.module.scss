@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 200ms cubic-bezier(.4, 0, .2, 1);
+    color: rgb(107, 114, 128);
+    font-size: 18px;
+    font-weight: 500;
+    border: 1.6px dashed rgb(156, 163, 175);
+
+    &:hover {
+        background-color: rgb(209 213 219);
+        border: 1.6px solid rgb(209 213 219);
+        cursor: pointer;
+    }
+}
+
+.edit {
+    width: 21px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    * {
+        color: rgb(0, 161, 241);
+    }
+}

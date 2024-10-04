@@ -25,12 +25,13 @@ model Task {
   priority    Priority
   dueDate     DateTime
   isCompleted IsCompleted
+  createdAt   DateTime    @default(now())
 }
 
 enum Priority {
   LOW
   MEDIUM
-  HIGHT
+  HIGH
 }
 
 enum IsCompleted {
